@@ -11,7 +11,7 @@ mongodb.connect(connectionString, {useNewUrlParser: true, useUnifiedTopology: tr
     if (err) {
         console.error('An error occured connecting to MongoDB: ', err)
     } else {
-        module.exports = client.db()
+        module.exports = client
         const app = require('./app')
         app.listen(port)
     }
